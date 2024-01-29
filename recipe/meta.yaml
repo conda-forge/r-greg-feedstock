@@ -1,4 +1,4 @@
-{% set version = '2.0.1' %}
+{% set version = "2.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Greg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Greg/Greg_{{ version }}.tar.gz
-  sha256: 8cd4823b233f5c0e419314cd84e1cfb2a2b672a11c2efca4505eadc32dbdcbb0
+  sha256: 1a8ca523aaca6e5a377a772f803e43e26ca4b0f78ac292e7e54827b711543a8f
 
 build:
-  merge_build_host: True           # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -75,14 +75,9 @@ test:
 about:
   home: http://gforge.se
   license: GPL-3.0-or-later
-  summary: Methods for manipulating regression models and for describing these in a style adapted
-    for medical journals. Contains functions for generating an HTML table with crude
-    and adjusted estimates, plotting hazard ratio, plotting model estimates and confidence
-    intervals using forest plots, extending this to comparing multiple models in a single
-    forest plots. In addition to the descriptive methods, there are functions for the
-    robust covariance matrix provided by the 'sandwich' package, a function for adding
-    non-linearities to a model, and a wrapper around the 'Epi' package's Lexis() functions
-    for time-splitting a dataset when modeling non-proportional hazards in Cox regressions.
+  summary: Methods for manipulating regression models and for describing these in a style adapted for medical journals. Contains functions for generating an HTML table with crude and adjusted estimates, plotting hazard ratio, plotting model estimates and confidence intervals using forest plots, extending this to comparing
+    multiple models in a single forest plots. In addition to the descriptive methods, there are functions for the robust covariance matrix provided by the 'sandwich' package, a function for adding non-linearities to a model, and a wrapper around the 'Epi' package's Lexis() functions for time-splitting a dataset when modeling
+    non-proportional hazards in Cox regressions.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
