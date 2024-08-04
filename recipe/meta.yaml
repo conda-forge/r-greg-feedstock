@@ -1,6 +1,5 @@
 {% set version = "2.0.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-greg
@@ -13,8 +12,7 @@ source:
   sha256: 1a8ca523aaca6e5a377a772f803e43e26ca4b0f78ac292e7e54827b711543a8f
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
