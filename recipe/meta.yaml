@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Greg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Greg/Greg_{{ version }}.tar.gz
-  sha256: 1a8ca523aaca6e5a377a772f803e43e26ca4b0f78ac292e7e54827b711543a8f
+  sha256: 7c5a154df94122a67c670ad5322cea1c11e30b35db3f532b7ac5622209a2ce21
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
